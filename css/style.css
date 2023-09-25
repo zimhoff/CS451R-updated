@@ -376,72 +376,11 @@ section{
    font-size: 1.6rem;
 }
 
-.reviews .box-container{
-   display:grid;
-   grid-template-columns: repeat(auto-fit, 35rem);
-   gap: 1.5rem;
-   align-items: flex-start;
-   justify-content: center;
-}
 
-.reviews .box-container .box{
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border: var(--border);
-   border-radius: .5rem;
-   padding: 2rem;
-}
 
-.reviews .box-container .box .stars{
-   margin-bottom: 1.5rem;
-}
 
-.reviews .box-container .box .stars i{
-   color: var(--main-color);
-   font-size: 1.8rem;
-}
 
-.reviews .box-container .box .title{
-   text-transform: capitalize;
-   font-size: 2rem;
-   color: var(--black);
-   text-align: right;
-   margin-bottom: .5rem;
-}
 
-.reviews .box-container .box p{
-   text-align: right;
-   font-size: 1.6rem;
-   color: var(--light-color);
-   padding: 1rem 0;
-   line-height: 1.8;
-}
-
-.reviews .box-container .box .user{
-   display: flex;
-   gap: 1.5rem;
-   margin-top: 1rem;
-   align-items: center;
-}
-
-.reviews .box-container .box .user img{
-   height: 6rem;
-   width: 6rem;
-   border-radius: 50%;
-   object-fit: cover;
-}
-
-.reviews .box-container .box .user h3{
-   font-size: 2rem;
-   color: var(--black);
-   margin-bottom: .5rem;
-   text-transform: capitalize;
-}
-
-.reviews .box-container .box .user span{
-   color: var(--light-color);
-   font-size: 1.6rem;
-}
 
 .job-filter form{
    background-color: var(--white);
@@ -847,9 +786,63 @@ section{
 
 
 
+.application-container{
+   background: url('../images/umkc3.jpg'), rgba(0,0,0,.7) no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   background-blend-mode: color;
+}
 
+.application-container .application-form{
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 
+.application-container .application-form form{
+   background-color: var(--white);
+   border-radius: .5rem;
+   padding:3rem 2rem;
+   width: 100rem;
+   text-align: center;
+}
 
+.application-container .application-form form h3{
+   font-size: 2.5rem;
+   color: var(--black);
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+}
+
+.application-container .application-form form .input{
+   width: 100%;
+   margin: 1rem 0;
+   font-size: 1.8rem;
+   padding: 1.4rem;
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+}
+
+.application-container .application-form form p{
+   padding: 1rem 0;
+   font-size: 1.6rem;
+   color: var(--light-color);
+}
+
+.application-container .application-form form p a{
+   color: var(--main-color);
+}
+
+.application-container .application-form form p a:hover{
+   color: var(--black);
+   text-decoration: underline;
+}
+
+.application-container .application-form form .flex .box{
+   font-size: 1.5rem;
+}
 
 
 

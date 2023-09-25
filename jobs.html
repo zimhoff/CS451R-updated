@@ -45,44 +45,37 @@
    <h1 class="heading">filter jobs</h1>
 
    <form action="" method="post">
-      <div class="flex">
-         <div class="box">
-            <p>job title <span>*</span></p>
-            <input type="text" name="title" placeholder="enter course number" required maxlength="20" class="input">
-         </div>
-   
-      </div>
+
       <div class="dropdown-container">
-         <div class="dropdown">
-            <input type="text" readonly placeholder="date posted" name="date" maxlength="20" class="output">
-            <div class="lists">
-               <p class="items">today</p>
-               <p class="items">3 days ago</p>
-               <p class="items">7 days ago</p>
-               <p class="items">10 days ago</p>
-               <p class="items">15 days ago</p>
-               <p class="items">30 days ago</p>
-            </div>
-         </div>
-         
+
          <div class="dropdown" id="category-dropdown">
-            <input type="text" readonly name="date" placeholder="category" maxlength="20" class="output">
+            <button class="output">
+                <span id="category-filter">Category</span>
+            </button>
             <div class="lists">
-               <p class="items" data-category="all">Show All</p>
-               <p class="items" data-category="Computer Science">Computer Science</p>
-               <p class="items" data-category="Electrical and Computer Engineering">Electrical and Computer Engineering</p>
-               <p class="items" data-category="Information Technology">Information Technology</p>
+                <p class="items" data-category="all">Show All Categories</p>
+                <p class="items" data-category="Computer Science">Computer Science</p>
+                <p class="items" data-category="Electrical and Computer Engineering">Electrical and Computer Engineering</p>
+                <p class="items" data-category="Information Technology">Information Technology</p>
             </div>
-         </div>
-         
-         <div class="dropdown">
-            <input type="text" readonly name="date" placeholder="education level" maxlength="20" class="output">
+        </div>
+        
+      </div>
+
+      <div class="dropdown-container">
+
+         <div class="dropdown" id="degree-dropdown">
+            <button class="output">
+                <span id="degree-filter">Degree</span>
+            </button>
             <div class="lists">
-               <p class="items">Bachlelor's Degree</p>
-               <p class="items">Master's Degree</p>
-               <p class="items">PhD</p>
+                <p class="items" data-degree="all">Show All Degrees</p>
+                <p class="items" data-degree="Bachelor's Degree">Bachelor's Degree</p>
+                <p class="items" data-degree="Master's Degree">Master's Degree</p>
+                <p class="items" data-degree="Ph.D.">Ph.D.</p>
             </div>
-         </div>
+        </div>
+        
       </div>
    </form>
 
@@ -98,7 +91,7 @@
 
    <div class="box-container">
 
-      <div class="box" data-category="Computer Science">
+      <div class="box" data-category="Computer Science" data-degree="Bachelor's Degree">
          <div class="company">
             <img src="images/icon-1.png" alt="">
             <div>
@@ -119,11 +112,11 @@
          </div>
       </div>
 
-      <div class="box" data-category="Computer Science">
+      <div class="box" data-category="Computer Science" data-degree="Master's Degree">
          <div class="company">
             <img src="images/icon-1.png" alt="">
             <div>
-               <h3>CS 101</h3>
+               <h3>CS 191</h3>
                <p>2 days ago</p>
             </div>
          </div>
@@ -140,7 +133,7 @@
          </div>
       </div>
 
-      <div class="box" data-category="Electrical and Computer Engineering">
+      <div class="box" data-category="Electrical and Computer Engineering" data-degree="Ph.D.">
          <div class="company">
             <img src="images/icon-2.png" alt="">
             <div>
@@ -762,21 +755,6 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
-
-<script>
-
-let dropdown_items = document.querySelectorAll('.job-filter form .dropdown-container .dropdown .lists .items');
-
-dropdown_items.forEach(items =>{
-   items.onclick = () =>{
-      items_parent = items.parentElement.parentElement;
-      let output = items_parent.querySelector('.output');
-      output.value = items.innerText;
-   }
-});
-
-</script>
-
    
 </body>
 </html>
