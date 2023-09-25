@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "file": "D:\\Updated-CS451R-main\\design\\home.html"
+            "file": "C:\\Users\\mjger\\Documents\\GitHub\\9-21-updated-code\\home.html"
         }
     ]
 }
